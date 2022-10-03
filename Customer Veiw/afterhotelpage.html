@@ -1,0 +1,115 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DOCU</title>
+</head>
+
+<body>
+    <nav class="flex justify-between rounded-lg p-2 border-zinc-800 border-b-2">
+        <a class=" text-2xl font-bold " href="#">HotelSite</a>
+        <div class="flex gap-2">
+            <button class="hover:bg-slate-200 p-2 rounded-sm">Login/SignUp</button>
+        </div>
+    </nav>
+
+    <div class="min-h-screen p-2 grid grid-cols-5 gap-2">
+        <!-- customer form -->
+        <div class="col-span-3 border-2 border-zinc-900">
+            <form action="" class="p-2 h-full flex flex-col">
+                <div class="basis-1/2">
+                    <div class="flex justify-around gap-2">
+                        <input type="text" placeholder="Name" class=" p-2 border-2 border-zinc-900" style="width: 50%;" required>
+                        <input type="tel" placeholder="Phone Number" class=" p-2 border-2 border-zinc-900" style="width: 50%;" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="flex flex-col mt-2">
+                        <input type="email" class=" p-2 border-2 border-zinc-900" placeholder="Email ID" required>
+                        <div>
+                            <label for="people">No of Persons :</label>
+                            <select name="people" class="w-full p-2 border-2 border-zinc-900 ">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="flex flex-col gap-2">
+                            <label for="proof">ID Proof:</label>
+                            <select class="border-2 border-zinc-900 p-2" name="proof" required>
+                                <option value="aadhar">Aadhar</option>
+                                <option value="other"  disabled>other</option>
+                            </select>
+                            <input type="tel" placeholder="ID number" class="border-2 border-zinc-900 p-2" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                            <input type="file">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex  basis-1/2 items-end ">
+                    <button type="submit" class="border-2 border-green-400 hover:bg-green-400 hover:text-white px-2 my-2 w-full ">Pay Now</button>
+                </div>
+            </form>
+        </div>
+        <!-- Hotel & Room detail -->
+        <div class="col-span-2 border-2 border-zinc-900 p-2 flex flex-col gap-y-6 ">
+            <div class="flex flex-col basis-1/2 gap-y-6">
+                <div class="text-xl font-bold">Hotel Name</div>
+                <div class="flex justify-between">
+                    <p>Check in Date </p><p>Check out Date</p>
+                </div>
+                <div class="flex justify-between">
+                    <p>Check in Time </p><p>Check out Time</p>
+                </div>
+                <div class="flex justify-between">
+                    <p>Number of Rooms</p><p>5</p>
+                </div> 
+                <div class="flex justify-between">
+                    <p>Rooms type</p><p>AC</p>
+                </div> 
+            </div>
+            <div class="basis-1/2 flex items-end">
+                <div class="border-2 border-zinc-900 w-full">
+                    <div class="p-0">
+                        <p class="p-2">Lorem ipsum dolor sit amet</p>
+                        <p class="p-2">Lorem ipsum dolor sit amet</p>
+                        <p class="p-2">Lorem ipsum dolor sit amet</p>
+                        <p class="p-2">Lorem ipsum dolor sit amet</p>
+                        <div class="flex justify-between border-t-2 border-zinc-900 p-2">
+                            <p>Total Amount</p><p>799 Rs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+      
+    </div>
+
+    <footer class="border-t-2 rounded-lg border-zinc-800 h-24 p-2">
+
+        <div class="grid grid-cols-3 px-10 rounded-t-lg border-2 border-zinc-900 mt-2 p-2">
+            <div class="flex flex-col">
+                <a href="#">AboutUs</a>
+                <a href="#">Help&Support</a>
+                <a href="#">FAQs</a>
+            </div>
+            <div class="flex flex-col">
+                <a href="#">Term&Cond</a>
+                <a href="#">PrivacyPolicy</a>
+                <a href="#">RefundPolicy</a>
+            </div>
+            <div class="flex flex-col">
+                <a href="#">Trust&Safety</a>
+                <a href="#">CyberFraud</a>
+                <!-- <a href="#">Term&Cond</a> -->
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+</html>

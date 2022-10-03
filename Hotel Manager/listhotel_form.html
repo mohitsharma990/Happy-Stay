@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>DOCU</title>
+</head>
+
+<body>
+  <nav class="flex justify-between p-2 border-zinc-800 border-b-2 rounded-b-lg">
+    <a class=" text-2xl font-bold " href="#">HotelSite</a>
+    <div class="flex gap-2">
+      <button class="hover:bg-slate-200 hover:underline p-2 rounded-sm">
+        <i class="fa-solid fa-person-shelter"></i>
+        <p class="font-bold text-xs">Book a Stay</p>
+      </button>
+      <button class="hover:bg-slate-200 hover:underline p-2 rounded-sm">
+        <i class="fa-solid fa-hotel"></i>
+        <p class="font-bold text-xs">List Your Hotel</p>
+      </button>
+      <button class="hover:bg-slate-200 hover:underline p-2 rounded-sm">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <p class="font-bold text-xs">SignUp/LogIn</p>
+      </button>
+    </div>
+  </nav>
+
+  <div class="min-h-screen">
+    <!-- form nav bar -->
+    <div class="flex flex justify-around border-2 border-zinc-900 mt-2 rounded-lg mx-24 px-2 py-1">
+      <div class=" basis-1/5 flex justify-center">
+        <button class="w-fit hover:underline hover:font-bold ">
+          Basic
+        </button>
+      </div>
+      <div class=" basis-1/5  flex justify-center">
+        <button class="w-fit hover:font-bold hover:underline">
+          Pricing
+        </button>
+      </div>
+      <div class=" basis-1/5 flex justify-center">
+        <button class="w-fit hover:underline hover:font-bold">
+          Facilities
+        </button>
+      </div>
+      <div class=" basis-1/5 flex justify-center">
+        <button class="w-fit hover:font-bold hover:underline">
+          Photo
+        </button>
+      </div>
+      <div class=" basis-1/5 flex justify-center">
+        <button class="w-fit hover:font-bold hover:underline">
+          Policy
+        </button>
+      </div>
+    </div>
+
+
+    <!-- basic details -->
+    <div class="border-2 border-zinc-900 rounded-lg mx-4 my-8 p-2 ">
+      <!-- basic form -->
+      <form action="#" class="flex flex-col gap-4 p-2">
+        <label for="prop" class="text-xl ml-2">Name of Property/Hotel:</label>
+        <input type="text" name="prop" class="border-2 border-zinc-900 rounded-lg px-2">
+        <p class="text-xl ml-2 mt-2">Owner of Property/Hotel:</p>
+        <div class="ml-2 flex flex-col gap-2 px-36">
+          <label for="oname" class="text-xs">Name</label>
+          <input type="text" name="oname" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="phone" class="text-xs">Phone no.</label>
+          <input type="tel" name="phone" id="" pattern="[0-9]{10}" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="altphone" class="text-xs">Alternate Phone no.</label>
+          <input type="tel" name="altphone" id="" pattern="[0-9]{10}" class="border-2 border-zinc-900 rounded-lg px-2">
+        </div>
+        <p class="text-xl ml-2 mt-2"> Address of Property/Hotel:</p>
+        <div class="ml-2 flex flex-col gap-2 px-36 ">
+          <label for="add_1" class="text-xs">Address Line-1</label>
+          <input type="text_area" name="add_1" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="add_2" class="text-xs">Address Line-2</label>
+          <input type="text" name="add_2" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="country" class="text-xs">Country</label>
+          <select name="country" class="border-2 border-zinc-900 rounded-lg px-2 ">
+            <option value="India">India</option>
+            <option value="Bhutan">Bhutan</option>
+            <option value="Other">Other</option>
+          </select>
+          <label for="city" class="text-xs">City</label>
+          <input type="text" name="city" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="pincode" class="text-xs">PIN Code</label>
+          <input type="number" name="pincode" class="border-2 border-zinc-900 rounded-lg px-2">
+        </div>
+      </form>
+    </div>
+
+    <div class="border-2 border-zinc-900 rounded-lg mx-4 my-8 p-2 ">
+      <!-- pricing form  -->
+      <form action="" class="flex flex-col gap-4 p-2">
+        <p class="text-xl ml-2 mt-2">Room & Pricing</p>
+        <div class="ml-2 flex flex-col gap-2 px-36 ">
+          <label for="roomt" class="text-xs">Type of room</label>
+          <select name="roomt" class="border-2 border-zinc-900 rounded-lg px-2 ">
+            <option value="sgl">Single</option>
+            <option value="sgl_ac">Single-AC</option>
+            <option value="dbl">Double</option>
+            <option value="abl_AC">Double-AC</option>
+          </select>
+          <label for="add_2" class="text-xs">No. of rooms</label>
+          <input type="text" name="add_2" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="price" class="text-xs">Price per night</label>
+          <input type="text" name="price" class="border-2 border-zinc-900 rounded-lg px-2">
+          <label for="mlimit" class="text-xs">Maximum limit of people</label>
+          <input type="number" name="limit" class="border-2 border-zinc-900 rounded-lg px-2">
+          <button class="border-2 border-zinc-900 rounded-lg px-2 ">
+            <p class="  ">Add Room</p>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <div class="border-2 border-zinc-900 rounded-lg mx-4 my-8 p-2 ">
+      <!-- facilites -->
+      <form action="" class="flex flex-col gap-4 p-2">
+        <p class="text-xl ml-2 mt-2">Facilities</p>
+        <div class="ml-2 flex flex-col gap-2 px-36 ">
+          <label for="fac"> Enter facilities/amenities</label>
+          <input type="text" name="fac" class="border-2 border-zinc-900 rounded-lg px-2">
+          <div>
+            <p>Is it paid?</p>
+            <input type="radio" id="ye" name="paid" value="HTML">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="paid" value="CSS">
+            <label for="no">No</label><br>
+          </div>
+          <button class="border-2 border-zinc-900 rounded-lg px-2 ">
+            <p>Add facilities</p>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    
+
+
+  </div>
+
+
+  <footer class="border-t-2 border-zinc-800 h-24 p-2 rounded-t-lg ">
+    <div class="grid grid-cols-3 px-10 rounded-t-lg border-2 border-zinc-900 mt-2 p-2">
+      <div class="flex flex-col">
+        <a href="#" class="hover:underline w-fit">AboutUs</a>
+        <a href="#" class="hover:underline w-fit">Help&Support</a>
+        <a href="# " class="hover:underline w-fit">FAQs</a>
+      </div>
+      <div class="flex flex-col">
+        <a href="#" class="hover:underline w-fit">Term&Cond</a>
+        <a href="#" class="hover:underline w-fit">PrivacyPolicy</a>
+        <a href="#" class="hover:underline w-fit">RefundPolicy</a>
+      </div>
+      <div class="flex flex-col">
+        <a href="#" class="hover:underline w-fit">Trust&Safety</a>
+        <a href="#" class="hover:underline w-fit">CyberFraud</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/0f12186728.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
