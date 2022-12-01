@@ -87,7 +87,76 @@
 </aside>
 
 <!-- Content -->
-<div class=" basis-4/5 overflow-auto p-10">
+<div class=" basis-4/5 overflow-auto p-10 w-full">
+
+<div class="flex gap-4 w-full">
+   <div class=" bg-red-500 h-40 text-white p-4" style="width:50%">
+      <p>Total no. of booking</p>
+      <p style="font-size: 60px;">
+         <?php
+            $q = "SELECT COUNT(book_id) FROM booking;";
+            $v = [];
+            $res = selectt($q,$v);
+            echo $res[0]['COUNT(book_id)'];
+         ?>
+      </p>
+   </div>
+   <div class=" bg-blue-500 h-40 text-white p-4" style="width:50%" >
+      <p>No. of staff</p>
+      <p style="font-size: 60px;">
+      <?php
+         $q = "SELECT COUNT(staff_id) FROM receptionist;";
+         $v = [];
+         $res = selectt($q,$v);
+         $qq = "SELECT COUNT(staff_id) FROM cleaning_staff;";
+         $vv = [];
+         $ress = selectt($qq,$vv);
+
+         echo $res[0]['COUNT(staff_id)']+$ress[0]['COUNT(staff_id)'];
+      ?>
+      <p>
+   </div>
+</div>
+
+<div class="flex gap-4 mt-4 w-full">
+   <div class=" bg-green-700 text-white h-40 p-4" style="width:40%">
+      <p>Total Revenue</p>
+      <p style="font-size: 60px;">
+         <?php
+            $q = "SELECT SUM(amount) FROM `booking`";
+            $v = [];
+            $res = selectt($q,$v);
+            echo "&#8377 \t";
+            echo $res[0]['SUM(amount)'];
+
+         ?>
+      </p>
+   </div>
+   <div class=" bg-slate-700 text-white h-40 p-4" style="width:30%">
+      <p>Resolved Queries</p>
+      <p style="font-size: 60px;">
+      <?php
+         $q = "SELECT r.staff_id,q.*,rp.staff_name FROM resolve AS r INNER JOIN queries AS q on r.query_no = q.query_no INNER JOIN receptionist AS rp on r.staff_id=rp.staff_id ORDER BY q.query_no DESC";
+         $v = [];
+         $ress = selectt($q, $v);
+         $k = count($ress);
+         echo $k;
+      ?>
+      </p>
+   </div>
+   <div class=" bg-orange-500 text-white h-40 p-4" style="width:30%">
+      <p>Unresolved Queries</p>
+      <p style="font-size: 60px;">
+      <?php
+         $q = "SELECT q.* FROM queries as q WHERE q.query_no NOT IN (SELECT r.query_no FROM resolve AS r INNER JOIN queries AS q on r.query_no = q.query_no INNER JOIN receptionist AS rp on r.staff_id=rp.staff_id )";
+         $v = [];
+         $ress = selectt($q, $v);
+         $k = count($ress);
+         echo $k;
+      ?>
+      </p>
+   </div>
+</div>
 
 </div>
 
