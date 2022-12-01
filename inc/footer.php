@@ -5,7 +5,7 @@
         <div class="col-lg-4 p-4">
             <h3 class="h-font fw-bold fs-3 mb-2">Happy Stay</h3>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ratione perferendis, soluta qui molestias exercitationem iure ullam. Nesciunt dolorem accusamus inventore blanditiis aperiam recusandae impedit dolore reiciendis dolorum. Ipsum, atque?
+            This holiday season, make the most of every moment with us. Take pleasure in the perfect escape.
             </p>
         </div>
         <div class="col-lg-4 p-4">
