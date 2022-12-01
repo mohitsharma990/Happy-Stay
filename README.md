@@ -30,3 +30,6 @@ staff_address, staff_contact, their shift timing ie day or night.
 - There will be a hotel owner whose details such as owner_id, owner email,
 owner_username, owner_password has to be recorded and who supervises
 the complete process.
+
+# ER Diagram
+![](er_diagram.jpg)
